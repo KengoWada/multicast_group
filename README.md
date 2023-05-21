@@ -6,16 +6,20 @@ A simple implementation of group communication with `MulticastSocket`
 
 - Clone the repo and change to that folder
 
-- Compile the file
+- Compile the files
 
 ```sh
-javac MulticastGroup.java
+javac *.java
 ```
 
 - Now execute the code
 
 ```sh
+# To run the client
 java -cp . MulticastGroup <group-name> <username>
+
+# To run the group monitor
+java -cp . MulticastGroupMonitor <group-name>
 ```
 
 - **Note**:
