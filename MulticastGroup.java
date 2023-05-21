@@ -19,7 +19,7 @@ public class MulticastGroup implements Runnable {
     public MulticastGroup(String group, String name) {
         groupName = group;
         username = name;
-        groupAddress = setGroupAddress(groupName);
+        groupAddress = getGroupAddress(groupName);
     }
 
     public static void main(String[] args) {
@@ -115,7 +115,7 @@ public class MulticastGroup implements Runnable {
         return errorMessage;
     }
 
-    public String setGroupAddress(String groupName) {
+    public String getGroupAddress(String groupName) {
         int groupNameIndex = Arrays.asList(GROUP_NAMES).indexOf(groupName);
         return GROUP_ADDRESSES[groupNameIndex];
     }
